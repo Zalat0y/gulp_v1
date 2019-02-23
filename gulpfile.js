@@ -138,7 +138,9 @@ gulp.task('compressjs', function (cb) {
 gulp.task('copy', function() {
     return gulp.src([
     		'src/img/**',
+		'src/css/main.css',
     		'src/css/main.min.css',
+		'src/js/main.js',
     		'src/js/main.min.js',
     		'src/**.html'
     	], {
