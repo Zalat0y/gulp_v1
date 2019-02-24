@@ -53,7 +53,7 @@ gulp.task('clean:build', function() {
 
 gulp.task('less', function() {
 
-	return gulp.src('src/less/*.less')
+	return gulp.src('src/less/main.less')
 		// следит за ошибками
 		.pipe(plumber({
 			errorHandler: notify.onError( function(err){
