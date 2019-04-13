@@ -1,5 +1,18 @@
-var nod = document.querySelector('.copyright')
-    nod.addEventListener('click', function(evt){
-    evt.preventDefault()
-    console.log('click on text');
+
+// hide menu
+
+$('.collapse').on('click', function(){
+  $('.menu').click(function() {
+    $(this).addClass('menu-hidden');
+
   });
+});
+
+// remove menu
+
+$('.collapse').on('click', function(){
+  $('.menu-hidden').click(function() {
+    $(this).removeClass('menu-hidden');
+
+  });
+});

@@ -117,7 +117,7 @@ gulp.task('less', function() {
 
 gulp.task('compressjs', function (cb) {
   pump([
-        gulp.src('src/js/*.js'),
+        gulp.src('src/js/main.js'),
         uglify(),
         rename({ suffix: '.min' }),
         gulp.dest('src/js')
@@ -138,9 +138,9 @@ gulp.task('compressjs', function (cb) {
 gulp.task('copy', function() {
     return gulp.src([
     		'src/img/**',
-		'src/css/main.css',
+				'src/css/main.css',
     		'src/css/main.min.css',
-		'src/js/main.js',
+				'src/js/main.js',
     		'src/js/main.min.js',
     		'src/**.html'
     	], {
@@ -175,4 +175,3 @@ gulp.task('build', gulp.series('clean', 'compressjs', 'copy', 'imagemin'));
        		  /* Start code */
 
 gulp.task('default', gulp.parallel('less', 'server'));
-
